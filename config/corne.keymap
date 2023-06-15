@@ -44,14 +44,14 @@
                 raise_layer {
 // RAISE
 // -----------------------------------------------------------------------------------------
-// |  ESC | BTCLR| BT1 | BT2 | BT3 | BT4 |            |     |  -  |  UP |  +  |     | BKSP |
-// |  TAB |      |     |     |     |     |            |     | LFT | DWN | RGT |     | DEL  |
-// | CTRL |      |     |     |     |     |            |     |  _  |     |  =  |     | ENT  |
-//                     | LALT|     |LSHFT|            | SPC |     | RALT|
+// |  ESC | BTCLR| BT1 | BT2 | BT3 | BT4 |            |     |  -[_]|  UP |  =[+]|     | BKSP |
+// |  TAB |      |     |     |     |     |            |     | LFT  | DWN | RGT  |     | DEL  |
+// | CTRL |      |     |     |     |     |            |     |      |     |      |     | ENT  |
+//                     | LALT|     |LSHFT|            | SPC |      | RALT|
                         bindings = <
-   &kp ESC   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                    &trans      &kp MINUS &kp UP   &kp  PLUS &trans   &kp BSPC
+   &kp ESC   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                    &trans      &kp MINUS &kp UP   &kp EQUAL &trans   &kp BSPC
    &kp  TAB  &trans     &trans       &trans       &trans       &trans                          &trans      &kp LEFT  &kp DOWN &kp RIGHT &trans   &kp DEL
-   &kp LCTRL &trans     &trans       &trans       &trans       &trans                          &trans      &kp UNDER &trans   &kp EQUAL &trans   &kp RET
+   &kp LCTRL &trans     &trans       &trans       &trans       &trans                          &trans      &trans    &trans   &trans    &trans   &kp RET
                     	             &kp LALT     &trans       &kp LSHFT                       &kp SPACE   &trans    &kp RALT
                         >;
                 };
@@ -64,20 +64,20 @@
 
 
 
-                                          // RAISE / RIGHT
-                                          // -----------------------------------------------------------------------------------------
-                                          // |  ESC | BTCLR| BT1 | BT2 | BT3 | BT4 |            |     |  -  |  UP |  +  |     | BKSP |
-                                          // |  TAB |      |     |     |     |     |            |     | LFT | DWN | RGT |     | DEL  |
-                                          // | CTRL |      |     |     |     |     |            |     |  _  |     |  =  |     | ENT  |
-                                          //                     | LALT|     |LSHFT|            | SPC |     | RALT|
+// RAISE
+// -----------------------------------------------------------------------------------------
+// |  ESC | BTCLR| BT1 | BT2 | BT3 | BT4 |            |     |  -[_]|  UP |  =[+]|     | BKSP |
+// |  TAB |      |     |     |     |     |            |     | LFT  | DWN | RGT  |     | DEL  |
+// | CTRL |      |     |     |     |     |            |     |      |     |      |     | ENT  |
+//                     | LALT|     |LSHFT|            | SPC |      | RALT|
 
 
-                     // DEFAULT
-                     // -----------------------------------------------------------------------------------------
-                     // | ESC  |  Q   |  W  |  E  |  R  |  T  |            |  Y  |  U  |  I  |  O  |  P  | BKSP |
-                     // | TAB  |  A   |  S  |  D  |  F  |  G  |            |  H  |  J  |  K  |  L  |  ;  |  '   |
-                     // | CTRL |  Z   |  X  |  C  |  V  |  B  |            |  N  |  M  |  ,  |  .  |  /  | ENT  |
-                     //                     | LALT| LWR |LSHFT|            | SPC | RSE | RALT|
+// DEFAULT
+// -----------------------------------------------------------------------------------------
+// | ESC  |  Q   |  W  |  E  |  R  |  T  |            |  Y  |  U  |  I  |  O  |  P  | BKSP |
+// | TAB  |  A   |  S  |  D  |  F  |  G  |            |  H  |  J  |  K  |  L  |  ;  |  '   |
+// | CTRL |  Z   |  X  |  C  |  V  |  B  |            |  N  |  M  |  ,  |  .  |  /  | ENT  |
+//                     | LALT| LWR |LSHFT|            | SPC | RSE | RALT|
 
 
 // LOWER
