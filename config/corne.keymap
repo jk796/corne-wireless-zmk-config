@@ -29,14 +29,14 @@
                 lower_layer { 
 // LOWER
 //----------------------------------------------------------------------------------------
-// | `(~) | 1[!] | 2[@]| 3[#]| 4[4]| 5[%]|            | 6[^]| 7[&] | 8[*] | 9[(]| 0[)]| BKSP |
-// | TAB  |  F1  |  F2 |  F3 |  F4 |  F5 |            |     |      |      | [[{]| ][}]|  \[|]|
-// | CTRL |      |     |     |     |     |            |     |      |      |     |     |  ENT |
-//                     |LSHFT|     | LALT|            |SPACE|      | RSHFT|
+// | `(~) | 1[!] | 2[@]| 3[#]| 4[4]   | 5[%]|            | 6[^]| 7[&] | 8[*] | 9[(]| 0[)]| BKSP |
+// | TAB  |  F1  |  F2 |  F3 |  F4    |  F5 |            |     |      |      | [[{]| ][}]|  \[|]|
+// | CTRL |      |     |     |LALT+F4 |     |            |     |      |      |     |     |  ENT |
+//                     |LSHFT|        | LALT|            |SPACE|      | RSHFT|
                         bindings = <
    &kp GRAVE    &kp N1     &kp N2       &kp N3       &kp N4       &kp N5                       &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &kp BSPC
    &kp TAB      &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                       &trans    &trans    &trans   &kp LBKT &kp RBKT &kp BSLH
-   &kp LCTRL  &trans       &trans       &trans       &trans       &trans                       &trans    &trans    &trans   &trans   &trans   &kp RET
+   &kp LCTRL  &trans       &trans       &trans       &kp LA(F4)   &trans                       &trans    &trans    &trans   &trans   &trans   &kp RET
                                         &kp LSHFT    &trans       &kp LALT                     &kp SPACE &trans    &kp RSHFT
                         >;
                 };
@@ -82,7 +82,7 @@
 
 // LOWER
 //----------------------------------------------------------------------------------------
-// | `(~) | 1[!] | 2[@]| 3[#]| 4[4]| 5[%]|            | 6[^]| 7[&] | 8[*] | 9[(]| 0[)]| BKSP |
-// | TAB  |  F1  |  F2 |  F3 |  F4 |  F5 |            |     |      |      | [[{]| ][}]|  \[|]|
-// | CTRL |      |     |     |     |     |            |     |      |      |     |     |  ENT |
-//                     |LSHFT|     | LALT|            |SPACE|      | RSHFT|
+// | `(~) | 1[!] | 2[@]| 3[#]| 4[4]   | 5[%]|            | 6[^]| 7[&] | 8[*] | 9[(]| 0[)]| BKSP |
+// | TAB  |  F1  |  F2 |  F3 |  F4    |  F5 |            |     |      |      | [[{]| ][}]|  \[|]|
+// | CTRL |      |     |     |LALT+F4 |     |            |     |      |      |     |     |  ENT |
+//                     |LSHFT|        | LALT|            |SPACE|      | RSHFT|
