@@ -49,12 +49,12 @@
 //   
 // | ESC  | BT1 | BT2 | BT3  | BT4  |BTCLR|           |HOME | PGUP |  UP  |PGDWN| END |  DEL |
 // | TAB  |     |     |      |      |     |           |LC(LEFT)| LEFT | DOWN |RIGHT|LC(RIGHT)| BKSP |
-// | CTRL | PSCRN |     |      |      |LGUI |           |RGUI | LA(LS(TAB)) | LG(D)| LA(TAB) |  LC(LS(Z))   |  ENT |
+// | CTRL | PSCRN |     |      |      |LGUI |           |RGUI | LC(LS(LEFT)) | LG(D)| LC(LS(RIGHT)) |  LC(LS(Z))   |  ENT |
 //                    |LSHFT |LC(LS(TAB))|RALT |           |SPACE|■■■■■■| RSHFT|
                         bindings = <
    &kp ESC   &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                     &kp HOME   &kp PG_UP &kp UP   &kp PG_DN  &kp END &kp DEL
    &kp TAB  &trans  &trans  &trans  &trans  &trans                                                   &kp LC(LEFT) &kp LEFT  &kp DOWN &kp RIGHT &kp LC(RIGHT)    &kp BSPC
-   &kp LCTRL &kp PSCRN     &trans       &trans       &trans       &kp LGUI                        &kp RGUI      &kp LA(LS(TAB))    &kp LG(D)   &kp LA(TAB)    &kp LC(LS(Z))    &kp RET
+   &kp LCTRL &kp PSCRN     &trans       &trans       &trans       &kp LGUI                        &kp RGUI      &kp LC(LS(LEFT))    &kp LG(D)   &kp LC(LS(RIGHT))    &kp LC(LS(Z))    &kp RET
                     	             &kp LSHFT    &kp LC(LS(TAB))       &kp RALT               &kp SPACE   &trans    &kp RSHFT
                         >;
                 };
@@ -111,5 +111,5 @@
 //   RIGHT:
 //     - ["ESC", "BT1", "BT2", "BT3", "BT4", "BTCLR", "HOME", "PGUP", "UP", "PGDWN", "END", "DELETE"]
 //     - ["TAB", "", "", "", "", "", "CTRL LEFT", "LEFT", "DOWN", "RIGHT", "CTRL RIGHT", "BKSPC"]
-//     - ["LCTRL", "PSCRN", null, null, null, "LGUI", "RGUI", "ALT SHFT TAB", "LGUI D", "ALT TAB", "CTRL SHFT Z", "ENTER"]
+//     - ["LCTRL", "PSCRN", null, null, null, "LGUI", "RGUI", "CTRL SHFT LEFT", "LGUI D", "CTRL SHFT RIGHT", "CTRL SHFT Z", "ENTER"]
 //     - ["LSHFT", "CTRL SHFT TAB", "RALT", "SPACE", {type: held}, "RSHFT"]
