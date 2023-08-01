@@ -19,12 +19,12 @@
 // | ESC  |  Q  |  W  |  E   |  R   |  T  |           |  Y  |   U  |   I  |  O  |  P  |  ' " |
 // | TAB  |  A  |  S  |  D   |  F   |  G  |           |  H  |   J  |   K  |  L  | ; : | BKSP |
 // | CTRL |  Z  |  X  |  C   |  V   |  B  |           |  N  |   M  |  , < | . > | / ? |  ENT |
-//                    |LGUI  |LOWER |LALT |           |SPACE| RAISE| RSHFT|
+//                    |LSHFT  |LOWER |LALT |           |SPACE| RAISE| RSHFT|
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E     &kp R &kp T                     &kp Y     &kp U  &kp I     &kp O   &kp P    &kp SQT
    &kp TAB   &kp A &kp S &kp D     &kp F &kp G                     &kp H     &kp J  &kp K     &kp L   &kp SEMI &kp BSPC
    &kp LCTRL &kp Z &kp X &kp C     &kp V &kp B                     &kp N     &kp M  &kp COMMA &kp DOT &kp FSLH &kp RET
-                         &kp LGUI  &mo 1 &kp LALT                  &kp SPACE &mo 2  &kp RSHFT
+                         &kp LSHFT &mo 1 &kp LALT                  &kp SPACE &mo 2  &kp RSHFT
                         >;
                 };
                 lower_layer { 
@@ -34,12 +34,12 @@
 // | ` ~  | 1 ! | 2 @ | 3 #  | 4 $  | 5 % |           | 6 ^ |  7 & |  8 * | 9 ( | 0 ) |  \ | |
 // | TAB  |  F1 | F2  |  F3  |  F4  | F5  |           |  F6 |  F7  |  F8  | F9  | F10 | BKSP |
 // | CTRL |LC(Z)|LC(A)|LA(F4)|LC(LA(DEL))| LGUI |     |RGUI |  - _ |  = + |  [ {|  ] }|  ENT |
-//                    |LSHFT |■■■■■■|LALT |           |SPACE|LA(TAB)| RSHFT|
+//                    |LSHFT |■■■■■■|LALT |           |SPACE|LC(TAB)| RSHFT|
                         bindings = <
    &kp GRAVE    &kp N1     &kp N2       &kp N3       &kp N4       &kp N5                       &kp N6    &kp N7    &kp N8   &kp N9   &kp N0   &kp BSLH
    &kp TAB      &kp F1     &kp F2       &kp F3       &kp F4       &kp F5                       &kp F6    &kp F7    &kp F8   &kp F9   &kp F10 &kp BSPC
    &kp LCTRL    &kp LC(Z)  &kp LC(A)    &kp LA(F4)   &kp LC(LA(DEL)) &kp LGUI                  &kp RGUI  &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp RET
-                                        &kp LSHFT    &trans       &kp LALT                     &kp SPACE &kp LA(TAB)    &kp RSHFT
+                                        &kp LSHFT    &trans       &kp LALT                     &kp SPACE &kp LC(TAB)    &kp RSHFT
                         >;
                 };
 
@@ -47,15 +47,15 @@
 //
 //                                            RAISE 
 //   
-// | ESC  |     |     |      |      |     |           |HOME | PGUP |  UP  |PGDWN| END |  DEL |
-// | TAB  | BT1 | BT2 | BT3  | BT4  |BTCLR|           |LC(LEFT)| LEFT | DOWN |RIGHT|LC(RIGHT)| BKSP |
-// | CTRL | PSCRN |     |      |      |LGUI |           |RGUI | LC(LS(TAB)) | LG(D)| LC(TAB) |  LC(LS(Z))   |  ENT |
-//                    |LSHFT |LA(LS(TAB))|RALT |           |SPACE|■■■■■■| RSHFT|
+// | ESC  | BT1 | BT2 | BT3  | BT4  |BTCLR|           |HOME | PGUP |  UP  |PGDWN| END |  DEL |
+// | TAB  |     |     |      |      |     |           |LC(LEFT)| LEFT | DOWN |RIGHT|LC(RIGHT)| BKSP |
+// | CTRL | PSCRN |     |      |      |LGUI |           |RGUI | LA(LS(TAB)) | LG(D)| LA(TAB) |  LC(LS(Z))   |  ENT |
+//                    |LSHFT |LC(LS(TAB))|RALT |           |SPACE|■■■■■■| RSHFT|
                         bindings = <
-   &kp ESC   &trans  &trans  &trans  &trans  &trans                                            &kp HOME   &kp PG_UP &kp UP   &kp PG_DN  &kp END &kp DEL
-   &kp  TAB  &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR               &kp LC(LEFT) &kp LEFT  &kp DOWN &kp RIGHT &kp LC(RIGHT)    &kp BSPC
-   &kp LCTRL &kp PSCRN     &trans       &trans       &trans       &kp LGUI                        &kp RGUI      &kp LC(LS(TAB))    &kp LG(D)   &kp LC(TAB)    &kp LC(LS(Z))    &kp RET
-                    	             &kp LSHFT    &kp LA(LS(TAB))       &kp RALT               &kp SPACE   &trans    &kp RSHFT
+   &kp ESC   &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                     &kp HOME   &kp PG_UP &kp UP   &kp PG_DN  &kp END &kp DEL
+   &kp TAB  &trans  &trans  &trans  &trans  &trans                                                   &kp LC(LEFT) &kp LEFT  &kp DOWN &kp RIGHT &kp LC(RIGHT)    &kp BSPC
+   &kp LCTRL &kp PSCRN     &trans       &trans       &trans       &kp LGUI                        &kp RGUI      &kp LA(LS(TAB))    &kp LG(D)   &kp LA(TAB)    &kp LC(LS(Z))    &kp RET
+                    	             &kp LSHFT    &kp LC(LS(TAB))       &kp RALT               &kp SPACE   &trans    &kp RSHFT
                         >;
                 };
         };
@@ -102,14 +102,14 @@
 //     - ["ESC", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "\" '"]
 //     - ["TAB", "A", "S", "D", "F", "G", "H", "J", "K", "L", ": ;", "BKSPC"]
 //     - ["LCTRL", "Z", "X", "C", "V", "B", "N", "M", "< ,", "> .", "? /", "ENTER"]
-//     - ["LGUI", "LEFT", "LALT", "SPACE", "RIGHT", "RSHFT"]
+//     - ["LSHFT", "LEFT", "LALT", "SPACE", "RIGHT", "RSHFT"]
 //   LEFT:
 //     - ["~ `", "! 1", "@ 2", "# 3", "$ 4", "% 5", "^ 6", "& 7", "* 8", "( 9", ") 0", "| \\"]
 //     - ["TAB", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "BKSPC"]
 //     - ["LCTRL", "CTRL Z", "CTRL A", "ALT F4", "CTRL ALT DEL", "LGUI", "RGUI", "_ -", "+ =", "{ [", "} ]", "ENTER"]
-//     - ["LSHFT", {type: held}, "LALT", "SPACE", "ALT TAB", "RSHFT"]
+//     - ["LSHFT", {type: held}, "LALT", "SPACE", "CTRL TAB", "RSHFT"]
 //   RIGHT:
-//     - ["ESC", "", "", "", "", "", "HOME", "PGUP", "UP", "PGDWN", "END", "DELETE"]
-//     - ["TAB", "BT1", "BT2", "BT3", "BT4", "BTCLR", "CTRL LEFT", "LEFT", "DOWN", "RIGHT", "CTRL RIGHT", "BKSPC"]
-//     - ["LCTRL", "PSCRN", null, null, null, "LGUI", "RGUI", "CTRL SHFT TAB", "LGUI D", "CTRL TAB", "CTRL SHFT Z", "ENTER"]
-//     - ["LSHFT", "ALT SHFT TAB", "RALT", "SPACE", {type: held}, "RSHFT"]
+//     - ["ESC", "BT1", "BT2", "BT3", "BT4", "BTCLR", "HOME", "PGUP", "UP", "PGDWN", "END", "DELETE"]
+//     - ["TAB", "", "", "", "", "", "CTRL LEFT", "LEFT", "DOWN", "RIGHT", "CTRL RIGHT", "BKSPC"]
+//     - ["LCTRL", "PSCRN", null, null, null, "LGUI", "RGUI", "ALT SHFT TAB", "LGUI D", "ALT TAB", "CTRL SHFT Z", "ENTER"]
+//     - ["LSHFT", "CTRL SHFT TAB", "RALT", "SPACE", {type: held}, "RSHFT"]
